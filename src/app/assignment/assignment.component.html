@@ -1,0 +1,12 @@
+<div class="table">
+    <button class="btn btn-md btn-primary" (click)="showDetails()">Display Details</button>
+    <p id="details" *ngIf="areDetailsVisible">Secret word is cat</p>
+</div>
+
+<p><strong>Button Clicks</strong></p>
+<p>{{ buttonClicks.toString() }} {{ buttonClicksClass.toString() }}</p>
+<!-- <ul id="list" style="display:none;">
+    <li [ngClass]="{blue: counter>=5}">test</li>
+</ul> -->
+<app-counter *ngFor="let click of buttonClicks" style="background-color: red;"></app-counter>
+<app-counter-class *ngFor="let click of buttonClicksClass"></app-counter-class>
